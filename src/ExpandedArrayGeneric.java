@@ -47,4 +47,12 @@ public class ExpandedArrayGeneric<T> {
         System.out.println();
     }
 
+    public void forEach(Operation<T> operation){
+        for (int i = 0; i < lastIndex; i++) {
+
+            operation.doOperation((T)data[i]);
+        }
+
+    }
+
 }

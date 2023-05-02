@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a919e2-ea26-45b1-9002-6eda9eb521c4" name="Changes" comment="First Commit">
+      <change afterPath="$PROJECT_DIR$/src/BankV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BankApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ExpandedArrayGeneric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExpandedArrayGeneric.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683033526922</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="First Commit">
+      <created>1683035193361</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683035193361</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
