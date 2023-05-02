@@ -1,15 +1,19 @@
 import java.util.Arrays;
 
-public class ExpandedArrayGeneric {
-    String[] data = new String[3];
+public class ExpandedArrayGeneric<T> {
+    Object[] data = new Object[3];
     int lastIndex = 0;
 
-    public int addElement(String element) {
+    public int addElement(T element) {
         if (lastIndex >= data.length)
             expandData();
 
         data[lastIndex] = element;
         return lastIndex++;
+    }
+
+    public T getElementByIndex(int index){
+        return (T)data[index];
     }
 
     private void expandData() {
@@ -27,7 +31,7 @@ public class ExpandedArrayGeneric {
         return true;
     }
 
-    public boolean removeByValue(String element){
+    public boolean removeByValue(T element){
         for (int i = 0; i < lastIndex; i++) {
             if (data[i].equals(element)){
                 return removeElementByIndex(i);
