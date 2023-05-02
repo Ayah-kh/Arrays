@@ -1,58 +1,29 @@
-import java.util.Arrays;
-
 public class Bank {
-    private String[] branches;
-    private int lastIndex=0;
+    private ExpandedArray branches;
+    private int lastIndex = 0;
 
-    public Bank(){
-        branches=new String[3];
-
-
+    public Bank() {
+        branches = new ExpandedArray();
     }
 
-    public int addBranch(String branch){
-        if (lastIndex>=branches.length)
-            expandBranchesArray();
+    public int addBranch(String branch) {
 
-        branches[lastIndex]=branch;
-        return lastIndex++;
+        return branches.addElement(branch);
     }
 
-    public boolean removeBranchByIndex(int index){
-        if (index<0||index>=lastIndex) {
-            return false;
-        }
-        for (int i = index; i < lastIndex-1; i++) {
-            branches[i]=branches[i+1];
+    public boolean removeBranchByIndex(int index) {
 
-        }
-        branches[--lastIndex]=null;
-        return true;
+        return branches.removeElementByIndex(index);
     }
 
-    public boolean removeBranchByValue(String branch){
-        for (int i = 0; i < lastIndex; i++) {
-            if (branches[i].equals(branch))
-                return removeBranchByIndex(i);
+    public boolean removeBranchByValue(String branch) {
 
-        }
-
-        return false;
+        return branches.removeByValue(branch);
     }
 
-    public void print(){
-        for (int i = 0; i < lastIndex; i++) {
-
-
-            System.out.print(branches[i]+" ");
-
-        }
-        System.out.println();
+    public void print() {
+        branches.print();
     }
 
-    private void expandBranchesArray(){
-        branches= Arrays.copyOf(branches,branches.length*2);
-
-    }
 }
 
